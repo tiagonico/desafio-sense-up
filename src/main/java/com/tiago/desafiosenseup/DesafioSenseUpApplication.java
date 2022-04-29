@@ -16,6 +16,9 @@ import com.tiago.desafiosenseup.repositories.MeasurementUnitRepository;
 import com.tiago.desafiosenseup.repositories.SensorDeviceRepository;
 import com.tiago.desafiosenseup.repositories.UserRepository;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+
+@OpenAPIDefinition
 @SpringBootApplication
 public class DesafioSenseUpApplication implements CommandLineRunner {
 
