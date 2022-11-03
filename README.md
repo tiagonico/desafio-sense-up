@@ -39,17 +39,23 @@ Para a implementação do serviço o candidato pode optar por utilizar Java ou K
 
 3️⃣ Na pasta raiz do projeto digite o comando no terminal para rodar a aplicação:
  
- * mvn spring-boot:run
+ ```
+ mvn spring-boot:run
+ ```
  
 Esse projeto utiliza o banco de dados H2, para acessar seu painel de controle basta 
 inserir o endereço abaixo no seu navegador e clicar em "Connect".
 
-* localhost:8080/h2-console
+```
+localhost:8080/h2-console
+```
 
 Para testar os endpoints sugeridos no desafio pode ser utilizado o <a href="https://www.postman.com/">Postman</a>, ou o próprio 
 Swagger, acessado pelo endereço abaixo.
 
-* localhost:8080/swagger-ui/index.html#/
+```
+localhost:8080/swagger-ui/index.html#/
+```
  
 # 🧿 Endpoints
 
