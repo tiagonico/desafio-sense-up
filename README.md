@@ -4,7 +4,7 @@
 
 Teste aos candidatos a vaga de estágio para desenvolvimento Backend da SenseUp.
 
-# 📜 Descrição
+## 📜 Descrição
 
 <b>Cenário do MiniSense:</b>
 
@@ -31,7 +31,7 @@ Implementar um serviço de backend (com um modelo e persistência de dados) que 
 
 Para a implementação do serviço o candidato pode optar por utilizar Java ou Kotlin com Spring Boot, Vert.X, Spark, ou Ktor, ou utilizar TypeScript com Express, AdonisJS ou NestJS.
 
-# 🛠️ Instalação
+## 🛠️ Instalação
 
 1️⃣ Primeiramente faça o download do projeto, seja baixando o arquivo .zip pelo navegador ou através do comando <i>git clone</i>.
 
@@ -57,56 +57,56 @@ Swagger, acessado pelo endereço abaixo.
 localhost:8080/swagger-ui/index.html#/
 ```
  
-# 🧿 Endpoints
+## 🧿 Endpoints
 
 Segue abaixo o funcionamento dos endpoints sugeridos no desafio:
 
-* [GET] localhost:8080/measurement-units
+* <b>[GET] localhost:8080/measurement-units</b>
 
 Essa requisição GETALL retorna todas as unidades de medida no banco de dados.
 
-* [GET] localhost:8080/sensor-devices/user/{id}
+* <b>[GET] localhost:8080/sensor-devices/user/{id}</b>
 
 Essa requisição GET retorna todos os dispositivos de usuário passando seu ID.
 
-* [GET] localhost:8080/sensor-devices?key={key}
+* <b>[GET] localhost:8080/sensor-devices?key={key}</b>
 
 Essa requisição GET retorna o dispositivo que corresponda à chave passada por parâmetro,
 caso não seja passado nada como parâmetro a requisição retorna todos os dispositivos no banco de dados.
 
-* [GET] localhost:8080/data-streams?key={key}
+* <b>[GET] localhost:8080/data-streams?key={key}</b>
 
 Essa requisição GET retorna o fluxo de dados que corresponda à chave passada por parâmetro,
 caso não seja passado nada como parâmetro a requisição retorna todos os fluxos no banco de dados.
 
-* [POST] localhost:8080/sensor-devices
-
+* <b>[POST] localhost:8080/sensor-devices</b>
+```
 {
   "label": "string",
   "description": "string"
 }
-
+```
 Essa requisição POST registra um dispositivo, retornando os campos "label" e "description" passados no corpo da requisição
 e o "id" e "key" gerado. 
 
-* [POST] localhost:8080/data-streams?key={key}
-
+* <b>[POST] localhost:8080/data-streams?key={key}</b>
+```
 {
   "label": "string",
   "unitId": 1
 }
-
+```
 Essa requisição POST registra um fluxo de dados para um dispositivo cuja chave é passada por parâmetro.
 A requisição precisa dos campos "label" e "unitId" em seu corpo. A resposta é os campos passados no corpo, 
 o "id" e "key" gerados, o "deviceId" (ID do dispositivo passado por parâmetro) e "measurementCount" (contador de medições).
 
-* [POST] localhost:8080/sensor-data?key={key}
-
+* <b>[POST] localhost:8080/sensor-data?key={key}</b>
+```
 {
   "timestamp": 1506521102,
   "value": 28.5
 }
-
+```
 Essa requisição POST registra um dados para um fluxo de dados cuja chave é passada por parâmetro.
 A requisição precisa dos campos "timestamp" e "value" em seu corpo. A resposta é os campos passados no corpo, 
 o "id" gerado e o "unitId" (ID da unidade de medida do seu fluxo de dados).
